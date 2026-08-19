@@ -446,3 +446,48 @@ button{font:inherit;cursor:pointer;border:0}
     flex-basis: 84vw;
   }
 }
+
+/* Mobile bottom navigation: the JSX uses buttons, so style the buttons directly. */
+@media (max-width: 900px){
+  .mobilebar{
+    display:flex;
+    position:fixed;
+    z-index:1000;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    background:#211719f2;
+    color:#fff;
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:7px;
+    box-shadow:0 14px 35px rgba(0,0,0,.22);
+  }
+  .mobilebar button{
+    flex:1;
+    min-width:0;
+    border:0;
+    background:transparent;
+    color:#fff9;
+    font-size:9px;
+    line-height:1.2;
+    padding:7px 4px;
+    text-align:center;
+  }
+  .mobilebar button b{
+    display:block;
+    font-size:16px;
+    line-height:1;
+    color:#fff;
+    margin-bottom:5px;
+  }
+  .mobilebar button:last-child{color:#f4cd91}
+  .mobilebar button:last-child b{color:#f4cd91}
+}
+
+/* The temple architecture image is a local Vite public asset. */
+.temple-bg{
+  background-image:linear-gradient(90deg,#25171af5 0%,#25171aca 43%,#25171a65 100%),url('/temple-architecture.png');
+}
+.temple-architecture{display:block;object-position:center center;}
